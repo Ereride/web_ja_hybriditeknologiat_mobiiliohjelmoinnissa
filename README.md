@@ -1,4 +1,4 @@
-# web_ja_hybriditeknologiat_mobiiliohjelmoinnissa
+# Web- ja hybriditeknologiat mobiiliohjelmoinnissa
  
 ## Viikko 1
 Tehtävänä oli luoda tavoitesyke-app joka laskee iän mukaan tavoite sykevälin
