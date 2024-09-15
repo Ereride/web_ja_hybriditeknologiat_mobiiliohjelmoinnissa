@@ -9,14 +9,18 @@ export default function MainBar({navigation, route, options, back}) {
 
    return (
     <Appbar.Header>
-        {back ? (<Appbar.BackAction onPress={navigation.goBack}/>) : null}
+        {back ? (
+          <Appbar.BackAction onPress={navigation.goBack}/>
+          ) : null}
        
-        <Appbar.Content
-        //title vaihtamalla MD Nav Demo:ksi saan molemmille sivuille saman otsikon// 
-        title={title} />
-        {!back ? (<Appbar.Action 
-                icon="arrow-right" 
-                onPress={() => currentNavigation.navigate('MD Nav Demo Second')}/>) : null}
+        <Appbar.Content title={title} />
+        
+        {!back ? (
+          <Appbar.Action 
+            icon="arrow-right" 
+            onPress={() => currentNavigation.navigate('MD Nav Demo Second')}
+          />
+        ) : null}
     </Appbar.Header>
   )
 }
