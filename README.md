@@ -2,7 +2,7 @@
  
 ## Viikko 1
 Tässä tehtävässä luodaan sovellus, joka laskee sykealueet liikuntaa varten käyttäjän iän perusteella. Sovellus käyttää seuraavia kaavoja laskemiseen:<br/>
-<br/>Ala-arvo:(220−ikä)×0.65<br/>
+<br/>Ala-arvo: (220−ikä)×0.65<br/>
 Yläarvo: (220−ikä)×0.85<br/>
 <br/>Käyttöliittymässä käyttäjä syöttää iän, ja laskuri näyttää sykerajat, kun "Calculate" -painiketta painetaan.
 
