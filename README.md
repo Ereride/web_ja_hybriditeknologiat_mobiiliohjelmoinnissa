@@ -2,11 +2,11 @@
  
 ## Viikko 1
 Tässä tehtävässä luodaan sovellus, joka laskee sykealueet liikuntaa varten käyttäjän iän perusteella. Sovellus käyttää seuraavia kaavoja laskemiseen:
-Ala-arvo: 
-(220−ikä)×0.65
-Yläarvo: 
-(220−ikä)×0.85
-Käyttöliittymässä käyttäjä syöttää iän, ja laskuri näyttää sykerajat, kun "Calculate" -painiketta painetaan.
+/nAla-arvo: 
+/n(220−ikä)×0.65
+/nYläarvo: 
+/n(220−ikä)×0.85
+/nKäyttöliittymässä käyttäjä syöttää iän, ja laskuri näyttää sykerajat, kun "Calculate" -painiketta painetaan.
 
 ## Viikko 2
 Tässä tehtävässä luotaan uusi Expo-projekti, jossa on yksinkertainen käyttöliittymä, joka käyttää Modal- ja Pressable-komponentteja. Modal-ikkuna avautuu, kun käyttäjä painaa tekstiä "Show modal message", ja ikkunan sisältö voidaan sulkea painamalla "Close" tai Androidilla laitteiston takaisin-painikkeella.
