@@ -11,3 +11,6 @@ Tässä tehtävässä luotaan uusi Expo-projekti, jossa on yksinkertainen käytt
 
 ## Viikko 3
 Tässä tehtävässä luotiin yksinkertainen sovellus käyttäen Stack-navigointia ja React Native Paper -kirjastoa, jossa käyttäjä voi siirtyä kotinäytöltä toiselle näytölle. Sovelluksessa toteutettiin mukautettu sovelluspalkki, joka näyttää navigointipainikkeita tilanteen mukaan: jos käyttäjä voi palata takaisin (SecondPage), näytetään takaisin-painike, muuten kotinäytöllä (FirstPage) nuolipainike siirtymiseen toiselle näytölle.
+
+## Viikko 4
+Tässä tehtävässä luotiin yksinkertainen Todo-sovellus, jossa käyttäjä voi hallita tehtävälistaa. Sovelluksessa käyttäjä voi lisätä uusia tehtäviä, merkitä tehtäviä suoritetuiksi tai poistetuiksi ja tallentaa tehtävät puhelimen muistiin käyttäen AsyncStoragea. Tehtävän tilaa voi muuttaa painamalla sitä tehtävälistassa.
