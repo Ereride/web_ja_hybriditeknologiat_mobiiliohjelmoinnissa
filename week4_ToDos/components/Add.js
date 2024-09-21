@@ -14,7 +14,7 @@ export default function Add({add}) {
       <TextInput
         style ={styles.form} 
         value={task} 
-        placeholder='Tänään tehtävää' 
+        placeholder='Enter task' 
         onChangeText={text => setTask(text)}
       />
       <TouchableOpacity style={styles.button} onPress={save}>

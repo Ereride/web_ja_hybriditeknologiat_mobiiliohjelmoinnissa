@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, SafeAreaView, FlatList, Text } from 'react-native';
 import Constants from 'expo-constants';
 import Row from './components/Row';
@@ -11,10 +11,8 @@ const STORAGE_KEY ='@items_key'
 
 export default function App() {
  const [data, setData] =useState([])
- const [selectedId, setSelectedId] = useState(null)
 
   useEffect(() => {
-    //AsyncStorage.clear()
     getData()
   }, [])
 
@@ -25,16 +23,12 @@ export default function App() {
  const add = useCallback((name) => {
   const newItem = {
     id: uuid.v4(),
-    name: name
+    name: name,
+    isComplete: false,
   }
   const tempData = [...data,newItem]
   setData(tempData)
  }, [data])
-
- 
- const select = (id) => {
-  setSelectedId(id)
- }
 
  const getData = async() => {
   try {
@@ -60,19 +54,17 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Tehtävä lista</Text>
+      <Text style={styles.title}>Todo list</Text>
       <Add add= {add} setData={setData}/>
       <FlatList
       data={data}
       keyExtractor={(item) => item.id}
-      extraData={selectedId}
       renderItem={({item}) => (
         <Row 
         item={item}
-        selectedId={selectedId}
-        select={select}
         data = {data}
         setData = {setData}
+        key={item.id}
         />
         )}
       />
