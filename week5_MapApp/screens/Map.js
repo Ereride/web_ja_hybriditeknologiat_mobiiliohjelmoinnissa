@@ -17,11 +17,11 @@ export default function Map(props) {
       mapType={props.mapType}
       onLongPress={showMarker}
     >
-      {marker.map((markerCoords, index) => (
+      {marker.map((marker, index) => (
         <Marker
           key={index}
           title={`Marker ${index + 1}`}
-          coordinate={{ latitude: markerCoords.latitude, longitude: markerCoords.longitude }}
+          coordinate={{ latitude: marker.latitude, longitude: marker.longitude }}
         />
       ))}
     </MapView>
