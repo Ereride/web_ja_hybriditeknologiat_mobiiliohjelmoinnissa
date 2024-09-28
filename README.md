@@ -14,3 +14,6 @@ Tässä tehtävässä luotiin yksinkertainen sovellus käyttäen Stack-navigoint
 
 ## Viikko 4
 Tässä tehtävässä luotiin yksinkertainen Todo-sovellus, jossa käyttäjä voi hallita tehtävälistaa. Sovelluksessa käyttäjä voi lisätä uusia tehtäviä, merkitä tehtäviä suoritetuiksi tai poistetuiksi ja tallentaa tehtävät puhelimen muistiin käyttäen AsyncStoragea. Tehtävän tilaa voi muuttaa painamalla sitä tehtävälistassa.
+
+## Viikko 5
+Tässä tehtävässä luodaan sovellus, joka näyttää kartan käyttäjän sijainnin perusteella. Käyttäjä voi lisätä useita markkereita karttaan pitkäpainalluksella. Sovellus ei tallenna markkereita pysyvästi. Karttakomponentti toteutetaan käyttäen React Native Maps -kirjastoa.
