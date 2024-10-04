@@ -17,3 +17,7 @@ Tässä tehtävässä luotiin yksinkertainen Todo-sovellus, jossa käyttäjä vo
 
 ## Viikko 5
 Tässä tehtävässä luodaan sovellus, joka näyttää kartan käyttäjän sijainnin perusteella. Käyttäjä voi lisätä useita markkereita karttaan pitkäpainalluksella. Sovellus ei tallenna markkereita pysyvästi. Karttakomponentti toteutetaan käyttäen React Native Maps -kirjastoa.
+
+## Viikko 6
+Tässä viikkotehtävässä luodaan yksinkertainen mobiilisovellus, joka hakee tietoja julkisesta API:sta ja näyttää ne käyttäjälle. Sovelluksessa käytetään PokéAPI-rajapintaa Pokémon-tietojen hakemiseen, ja se toteutetaan React Native -ympäristössä.
+
