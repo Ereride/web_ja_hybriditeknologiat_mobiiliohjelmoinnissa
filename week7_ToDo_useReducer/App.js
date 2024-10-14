@@ -12,7 +12,7 @@ const reducer = (state, action) => {
     case 'add':
       return {
         ...state, 
-        todos: { id: Date.now(), text: action.payload }
+        todos: [...state.todos, { id: Date.now(), text: action.payload }]
       };
     case 'remove':
       return {
