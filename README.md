@@ -21,3 +21,5 @@ Tässä tehtävässä luodaan sovellus, joka näyttää kartan käyttäjän sija
 ## Viikko 6
 Tässä viikkotehtävässä luodaan yksinkertainen mobiilisovellus, joka hakee tietoja julkisesta API:sta ja näyttää ne käyttäjälle. Sovelluksessa käytetään PokéAPI-rajapintaa Pokémon-tietojen hakemiseen, ja se toteutetaan React Native -ympäristössä.
 
+## Viikko 7
+Tässä tehtävässä toteutetaan yksinkertainen Todo-lista-sovellus käyttäen `useReducer`-hookia tilanhallintaan. Sovelluksessa käyttäjä voi lisätä uusia tehtäviä tekstikentän ja "Save"-painikkeen avulla, ja poistaa tehtäviä painamalla tehtävälistan rivejä. Tehtävät esitetään `FlatList`-komponentin avulla, ja tiedot (tehtävälista) säilytetään muistissa `useReducer`-hookin avulla. Sovellus ei tallenna tehtäviä pysyvästi.
