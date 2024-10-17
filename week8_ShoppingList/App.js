@@ -1,7 +1,7 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
-import {addDoc, collection, firestore, PRODUCTS, serverTimestamp, deleteDoc, doc} from './firebase/Config';
+import { addDoc, collection, firestore, PRODUCTS, serverTimestamp, deleteDoc, doc } from './firebase/Config';
 import { useEffect, useState } from 'react';
-import { onSnapshot, orderBy, query} from 'firebase/firestore';
+import { onSnapshot, orderBy, query } from 'firebase/firestore';
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 
@@ -14,18 +14,18 @@ export default function App() {
     const docRef = await addDoc(collection(firestore, PRODUCTS), {
       text: newproduct,
       created: serverTimestamp()
-    }).catch (error => console.log(error));
+    }).catch(error => console.log(error));
 
     setnewproduct('')
     console.log('product saved.')
   }
 
   useEffect(() => {
-    const q = query(collection(firestore,PRODUCTS), orderBy('created', 'desc'))
-    const unsubscribe = onSnapshot(q,(querySnapshot) => {
+    const q = query(collection(firestore, PRODUCTS), orderBy('created', 'desc'))
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const tempproducts = []
       querySnapshot.forEach((doc) => {
-        tempproducts.push({...doc.data(), id: doc.id})
+        tempproducts.push({ ...doc.data(), id: doc.id })
       })
       setproducts(tempproducts)
     })
@@ -64,26 +64,30 @@ export default function App() {
         />
       </View>
       <View style={styles.form}>
-      <ScrollView>
-        {
-          products.map((product) => (
-            <View key={product.id} style={styles.product}>
-              <TouchableOpacity onPress={() => toggleSelection(product.id)}>
-                  <Text style={{
-                    textDecorationLine: selectedProducts.includes(product.id) ? 'line-through' : 'none'
-                  }}>
+        <ScrollView>
+          {
+            products.map((product) => (
+              <View key={product.id} style={styles.product}>
+                <TouchableOpacity
+                  style={styles.productTextContainer}
+                  onPress={() => toggleSelection(product.id)}
+                >
+                  <Text
+                    style={{ textDecorationLine: selectedProducts.includes(product.id) ? 'line-through' : 'none', flexShrink: 1, }}>
                     {product.text}
                   </Text>
                 </TouchableOpacity>
                 {
                   selectedProducts.includes(product.id) && (
-                    <Ionicons name='trash' size={24} paddingLeft={8} onPress={() => handleDelete(product.id)} />
+                    <TouchableOpacity onPress={() => handleDelete(product.id)}>
+                      <Ionicons name='trash' size={24} style={styles.trashIcon} />
+                    </TouchableOpacity>
                   )
                 }
-            </View>
-          ))
-        }
-      </ScrollView>
+              </View>
+            ))
+          }
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
     margin: 8,
     fontSize: 24,
   },
-  form:{
+  form: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
@@ -112,11 +116,17 @@ const styles = StyleSheet.create({
     margin: 8,
     padding: 4,
     borderBottomWidth: 1,
-    borderBottomColor:'#ccc',
+    borderBottomColor: '#ccc',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  productInfo: {
-    fontSize: 12
+  productTextContainer: {
+    flexDirection: 'row',
+    flexShrink: 1,
+    alignItems: 'center',
+  },
+  trashIcon: {
+    paddingLeft: 8,
   }
 });
