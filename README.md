@@ -23,3 +23,6 @@ Tässä viikkotehtävässä luodaan yksinkertainen mobiilisovellus, joka hakee t
 
 ## Viikko 7
 Tässä tehtävässä toteutetaan yksinkertainen Todo-lista-sovellus käyttäen `useReducer`-hookia tilanhallintaan. Sovelluksessa käyttäjä voi lisätä uusia tehtäviä tekstikentän ja "Save"-painikkeen avulla, ja poistaa tehtäviä painamalla tehtävälistan rivejä. Tehtävät esitetään `FlatList`-komponentin avulla, ja tiedot (tehtävälista) säilytetään muistissa `useReducer`-hookin avulla. Sovellus ei tallenna tehtäviä pysyvästi.
+
+## Viikko 8
+Tässä tehtävässä toteutetaan ostoslista-sovellus, jossa käyttäjä voi lisätä ja poistaa tuotteita listalta. Tiedot tallennetaan Firebase Firestore -tietokantaan. Käyttäjä voi lisätä uusia tuotteita, yliviivata tuotteen painamalla sitä ja tämän jälkeen tuote voidaan poistaa listalta roskakorilla.
